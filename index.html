@@ -21,14 +21,14 @@
         }
 
         .credit {
-        	font-size: 14px; 
-        	margin-left: 5px; 
-        	color: #333; 
-        	font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 14px; 
+            margin-left: 5px; 
+            color: #333; 
+            font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
         .i-padding {
-        	padding-top: 10px;
+            padding-top: 10px;
         }
     </style>
 </head>
@@ -79,45 +79,13 @@
                     <div class="section-padding">
                     <div class="title anchor-fix" id="gardens">Three Gardens</div>
                     <p>
-                        You can distribute your pieces at one of three gardens: <a href="http://www.thetrustees.org/places-to-visit/boston-community-gardens/garden-list.html">Nightingale Community Garden</a> in Dorchester, <a href="http://www.thetrustees.org/places-to-visit/boston-community-gardens/garden-list.html"> El Jardín de la Amistad</a> in Roxbury, or  <a href="https://titussparrowpark.org//">Titus Sparrow Park</a> in the South End.
+                        You can distribute your pieces at one of three gardens: <a href="http://www.thetrustees.org/places-to-visit/boston-community-gardens/garden-list.html">Nightingale Community Garden</a> in Dorchester, <a href="http://www.thetrustees.org/places-to-visit/boston-community-gardens/garden-list.html"> El Jardín de la Amistad</a> in Roxbury, or  <a href="http://www.worcesterstreetgarden.org/">Worcester Street Community Garden</a> in the South End.
                     </p>
                     <div id="map"></div>
                     </div>
                     <p style="font-size: 12px; color: #333; font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;">
                         *Map tiles</a> by <a target="_top" href="http://stamen.com">Stamen Design</a>, under <a target="_top" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.
                     </p>
-                    <div class="section-padding">
-                    <div class="title">Nightingale Community Garden</div>
-                    <p class="img-container">
-                        <img class="c-img" src="img/nightingale.jpg">
-                    </p>
-                    <p>
-                        <strong>Nightingale Community Garden</strong> is a 1.25-acre garden with 133 garden plots in Dorchester. It has a central concrete plaza with a large sun shelter, which is ideal for a variety of events.
-                    </p>
-                    </div>
-                    <div class="section-padding" style="padding-top: 10px;">
-                    <div class="title">El Jardín de la Amistad</div>
-                    <p class="img-container">
-                        <img class="c-img" src="img/ej.jpg">
-                    </p>
-                    <p class="credit">
-                        Photo Credit: Nuestra Comunidad
-                    </p>
-                    <p>
-                        <strong>El Jardín de la Amistad</strong> is a ~11,000 square foot community garden located on Dudley Street in Roxbury. In addition to the plots, El Jardín features a grassy space next to the garden and a brick patio inside - a good spot for performances, storytelling events, or dinners.
-                    </p>
-                    </div>
-                    <div class="section-padding">
-                    <p>
-                        <div class="title">Titus Sparrow Park</div>
-                    </p>
-                    <p class="img-container">
-                        <img class="c-img" src="img/titus.jpg">
-                    </p>
-                    <p>
-                        <strong>Titus Sparrow Park</strong> is located in Boston's South End and features 15 community garden plots, a basketball court, a tennis court, in addition to large gathering spaces and a playground for children.
-                    </p>
-                    </div>
                 </div>
             </div>
 
@@ -145,8 +113,8 @@
                     <ul>
                         <li>We will notify selected artists by May 1st and selected artists must have their pieces ready by May 22. We will coordinate with you regarding pick-up and distribution.</li>
                         <li class="list-padding">We will provide you with the core materials (a mixture of window boxes, planters, pots, and birdhouses) and should you be chosen, we will notify you where to pick these up.</li>
-                   		<li class="list-padding">Proposals should include a porfolio of your work.</li>
-                   		<li class="list-padding">Proposals should include a proposed budget in the range of $4,000 - $5,000.</li>
+                        <li class="list-padding">Proposals should include a porfolio of your work.</li>
+                        <li class="list-padding">Proposals should include a proposed budget in the range of $4,000 - $5,000.</li>
                     </ul>
                     <p style="margin-top: 25px;">
                         <strong>More questions?</strong> Email us at <a href="mailto:invitational@newurbanmechanics.org">invitational@newurbanmechanics.org</a>.
@@ -196,18 +164,18 @@
         var stamenLayer2 = new L.TileLayer(stamenURL2, {maxZoom: 18});
 
         var width = Math.max(document.body.scrollWidth,
-    		document.documentElement.scrollWidth,
-    		document.body.offsetWidth,
-    		document.documentElement.offsetWidth,
-    		document.documentElement.clientWidth
-    	);
+            document.documentElement.scrollWidth,
+            document.body.offsetWidth,
+            document.documentElement.offsetWidth,
+            document.documentElement.clientWidth
+        );
 
         if (width < 584) {
-        	var center = new L.LatLng(42.353, -71.0821);
-        	map.setView(center, 12);
+            var center = new L.LatLng(42.353, -71.0821);
+            map.setView(center, 12);
         } else {
-        	var center = new L.LatLng(42.3223, -71.072);
-        	map.setView(center, 12);	
+            var center = new L.LatLng(42.3223, -71.072);
+            map.setView(center, 12);    
         }
         
         map.addLayer(stamenLayer1);
@@ -228,7 +196,7 @@
             orangeIcon = new LeafIcon({iconUrl: 'img/map-marker.png'});
 
         L.marker([42.2949323, -71.0733996], {icon: greenIcon}).addTo(map).bindTooltip("<a href='https://www.google.com/maps/place/512+Park+St,+Dorchester+Center,+MA+02124/@42.294801,-71.0740265,19z/data=!3m1!4b1!4m5!3m4!1s0x89e37b94cd3b7d87:0xa7b3a51c3660a060!8m2!3d42.2948!4d-71.073478' target='_blank' rel='noopener noreferrer'><strong>Nightingale</strong></a>",{offset: [5, 21], permanent: true, direction: "right"});
-        L.marker([42.3435556,-71.0817337], {icon: redIcon}).addTo(map).bindTooltip("<a href='https://www.google.com/maps/place/Titus+Sparrow+Park/@42.3435556,-71.0817337,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a117b4f2ea1:0x8f5975e57f1ad080!8m2!3d42.3435517!4d-71.0795397' target='_blank' rel='noopener noreferrer'><strong>Titus Sparrow</strong></a>", {offset: [-2, 21], permanent: true, direction: "left"});
+        L.marker([42.3435556,-71.0817337], {icon: redIcon}).addTo(map).bindTooltip("<a href='https://www.google.com/maps/place/Worcester+Street+Community+Garden/@42.3405667,-71.081769,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a16a03908f7:0xe30e25908887b8ea!8m2!3d42.3405667!4d-71.079575' target='_blank' rel='noopener noreferrer'><strong>Worcester Street Community Garden</strong></a>", {offset: [-2, 21], permanent: true, direction: "left"});
         L.marker([42.3257712,-71.077695], {icon: orangeIcon}).addTo(map).bindTooltip("<a href='https://www.google.com/maps/place/403+Dudley+St,+Boston,+MA+02119/@42.3257712,-71.077695,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a3794e99867:0x15d0e87786e06caf!8m2!3d42.3257673!4d-71.075501' target='_blank' rel='noopener noreferrer'><strong>El Jardín de la Amistad</strong></a>", {offset: [-5, 21], permanent: true, direction: "left"});
     </script>
 </body>
