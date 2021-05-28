@@ -150,7 +150,7 @@ p {
 }
 
 #update-link {
-	text-decoraton:underline;
+	text-decoraton:underline !important;
 }
 
 @media (max-width: 767px) {
