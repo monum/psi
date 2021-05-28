@@ -12,7 +12,7 @@ a {
 	text-decoration: none;
 }
 
-a #update-link {
+#update-link a:link {
 	text-decoraton:underline;
 }
 
