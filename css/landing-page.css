@@ -12,8 +12,8 @@ a {
 	text-decoration: none;
 }
 
-#update-link {
-	text-decoraton:underline;
+a.underline { 
+	text-decoration: underline;
 }
 
 
