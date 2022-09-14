@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Public Space Invitational 2020</title>
+    <link rel="shortcut icon" href="img/leaf-nav.png">
+    <link rel="apple-touch-icon" href="img/leaf-nav.png">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <style>
+        .leaflet-tooltip {
+            pointer-events: auto;
+        }
+
+        .credit {
+            font-size: 14px; 
+            margin-left: 5px; 
+            color: #333; 
+            font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .i-padding {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top nav_style">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href=""><img style="opacity:.8;" class="nav-img pull-left" src="img/leaf-nav.png"/>Public Space Invitational</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">About</a></li>
+            <li><a href="#challenge">The Challenge</a></li>
+            <li><a href="#apply">Apply</a></li>
+            <li><a href="/faq-2020.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<div id="logo-container" style="max-width:650px;">
+    <img id="logo" style="max-width:650px;" src="img/psi-2022-main.jpg"/>
+</div>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div id="message">
+                    <div class="section-padding">
+                        <!--<div id="alert" style="background-color: #d9edf7; border-color: #bce8f1; color: #31708f; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;">
+                            <strong>Update!</strong> The application period is now closed. We will be announcing selections in late May 2020.
+                        </div>-->
+                    <p>
+                        <div id="about" class="title anchor-fix">Experiments for a Green New Deal Neighborhood</div>
+                    </p>
+                    <p>
+                        Since 2014, we have crowdsourced ideas to make Boston’s public spaces more delightful, intuitive, and beautiful through the <strong>Public Space Invitational</strong>, our annual civic design competition. This year, we are seeking proposals that use any form of art and design to help us answer foundational questions on implementation of the <strong>Green New Deal</strong> in Boston, namely questions focused on the expansion of green infrastructure, food justice, and climate resilience.
+                    </p>
+                    </div>
+                    <div class="section-padding">
+                    <div class="title anchor-fix" id="challenge">This Year's Challenge</div>
+                    <p>
+                        In Mayor Michelle Wu’s <a href="https://assets.ctfassets.net/1hf11j69ure4/B6NLxlOVxTVMNbHEvFaQE/700f4762bae92990f91327a7e01e2f09/Boston-Green-New-Deal-August-2020-FINAL.pdf">Planning for a Boston Green New Deal and Just Recovery</a>, she asks us to “imagine the City of Boston leading the way on climate justice.” Addressing climate change requires bold, systemic changes to City policies in decarbonization, clean energy financing, heat abatement, stormwater mitigation, sustainable transportation expansion, and a host of other areas.
+                    </p>
+                    <p>
+                        Many components of the Green New Deal are long-term goals. Many of these goals fall under the umbrella of improving and expanding green infrastructure and harnessing nature as an infrastructure system. Before we reach those goals, there are a series of questions we must answer through experimentation.
+                    </p>
+                    <p>
+                    Our <strong>central</strong> questions are the following:
+                        <ul>
+
+                        <li>How can we introduce Bostonians of all ages to some of these initiatives in playful, tangible ways that spark curiosity and ensure they’re more familiar and comfortable when they encounter these initiatives in the future?
+                        </li>
+                        <li>
+                           How do we foster excitement about a green future instead of wallowing in dread about the consequences of climate change?
+                        </li>
+                        <li>
+                            How can we creatively activate untapped spaces so that every inch of public space is contributing to climate resilience rather than squandering potential?
+                        </li>
+                        </ul>
+                    </p>
+                    <div class="section-padding">
+                    <div class="title anchor-fix" id="challenge">Two Tracks</div>
+                    <div class="section-padding">
+                    <p>
+                        Below, we ask you to consider one of <strong>two tracks</strong> to help you focus your proposal. The tracks are provided to seed ideas — <strong>we also welcome proposals related to this year’s theme that fall outside of these two directions</strong>.
+                    </p>
+                    <div class="section-padding"></div>
+                    <p>
+                        <strong>Education Track: The Invisible Work of Green Infrastructure</strong>
+                    </p>
+                    <p>
+                        Beautiful public spaces are more than just pleasing to the eye. The elements that make them aesthetically delightful — adequate tree canopy, permeable surface materials like grass or native groundcovers (instead of asphalt!), and diverse vegetation — are on the front lines of combating flooding, water pollution, and excessive heat. Existing green infrastructure is all around us and largely goes undetected – a sign that it has been well integrated into the landscape.
+                    </p>
+                    <p>
+                        [ Example picture: i.e., vegetated features that manage stormwater and mitigate urban heat island effect ]
+                    </p>
+                    <p>
+                        Going forward, the City will be working toward an even more comprehensive green infrastructure network as part of Boston’s Green New Deal. We are looking for installations that draw attention to green infrastructure and educate the public about its benefits and behind-the-scenes workings, as well as shift the way we view nature in the city.
+                    </p>
+                    <div class="section-padding"></div>
+                    <p>
+                        <strong>Solutions Track #1: Leveraging the Intersection of Food Justice and Climate Resilience</strong>
+                    </p>
+                    <p>
+                        Community gardens, one form of urban agriculture, provide solutions to pervasive food insecurity. They are also vital components of Boston’s green infrastructure network. Composed of rows of raised beds, these gardens are incredibly permeable, reducing the generation of stormwater runoff. Unfortunately, many gardens also face exorbitant water bills—if access to water is even an option. How can we improve the way gardeners harvest rainwater for their crops and leverage the gardens’ inherent permeability to enhance green stormwater management?
+                    </p>
+                    <p>
+                        This is just one example of a potential improvement that can benefit community gardeners while also optimizing the gardens’ contributions to the ecosystem. Another avenue could be improving and demonstrating their cooling effects or carbon sequestration. What other design solutions can you come up with? Bonus points for a design that legibly conveys its function, so that it also serves an educational purpose!
+                    </p>
+                    <div class="section-padding"></div>
+                    <p>
+                        <strong>Solutions Track #2: Greening City Parking Lots</strong>
+                    </p>
+                    <p>
+                        Solutions track #1 prompts applicants to do cool things with sites that are already contributing to Boston’s green infrastructure system. What about parcels that do more harm than good? Asphalt parking lots are the worst of the worst, but with great challenges come great opportunities. City-owned parking lots present a blank slate for experimenting with green interventions, such as rain gardens, bioswales, bioretention, and/or permeable paving. As Joni Mitchell laments, “They paved paradise and put up a parking lot.” What can we do to turn these parking lots into a paradise while still allowing the lots to function as parking?
+                    </p>
+                    <div id="map"></div>
+                    </div>
+                    <p style="font-size: 12px; color: #333; font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;">
+                        *Map tiles</a> by <a target="_top" href="http://stamen.com">Stamen Design</a>, under <a target="_top" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="content-section-b" style="border: none; padding: 0px 0;">
+        <div class="container">
+            <div class="row">
+                <div id="message">
+                    <div class="title anchor-fix" id="apply">Apply!</div>
+                    <p>
+                        You can apply <a href="https://airtable.com/shrQjYgZFxszlKPqJ">here</a>.
+                    </p>
+                    <p>
+                        The deadline for applications is <strong>October 17th, 2022 at 5 PM</strong>.
+                    </p>
+                    <p style="padding-top: 10px;">
+                        <b>Project Guidelines</b>
+                    </p>
+                    <ul>
+                        <li></li>
+                        <li class="list-padding"></li>
+                        <li class="list-padding">Proposals should include a porfolio of your work.</li>
+                        <li class="list-padding">Proposals should include a proposed budget of up to $9,500.</li>
+                    </ul>
+                    <p style="margin-top: 25px;">
+                        <strong>More questions?</strong> Email us at <a href="mailto:invitational@newurbanmechanics.org">invitational@newurbanmechanics.org</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="font-size: 13px; line-height: 13px; color: #aaa;">
+                        <a style="color: #888" href="https://twitter.com/newurbanmechs">
+                            <i class="fa fa-twitter" style="padding-right: 3px;"></i>New Urban Mechanics
+                        </a>
+                    </p>
+                    <p style="font-size: 13px; line-height: 13px; color: #aaa;">
+                        &copy; 2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <script>
+        $(document).on('click','.navbar-collapse.in',function(e) {
+            if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+                $(this).collapse('hide');
+            }
+        });
+
+        var map = new L.Map('map', {
+            scrollWheelZoom: false,
+            touchZoom: true,
+            doubleClickZoom: true,
+            zoomControl: true,
+            dragging: true,
+            attributionControl: false
+        });
+
+        var stamenURL1 = 'https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg';
+        var stamenURL2 = 'https://stamen-tiles.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png';
+        var stamenLayer1 = new L.TileLayer(stamenURL1, {maxZoom: 18});
+        var stamenLayer2 = new L.TileLayer(stamenURL2, {maxZoom: 18});
+
+        var width = Math.max(document.body.scrollWidth,
+            document.documentElement.scrollWidth,
+            document.body.offsetWidth,
+            document.documentElement.offsetWidth,
+            document.documentElement.clientWidth
+        );
+
+        if (width < 584) {
+            var center = new L.LatLng(42.353, -71.0821);
+            map.setView(center, 12);
+        } else {
+            var center = new L.LatLng(42.3223, -71.072);
+            map.setView(center, 12);    
+        }
+        
+        map.addLayer(stamenLayer1);
+        map.addLayer(stamenLayer2);
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                shadowUrl: 'img/m-shadow.png',
+                iconSize:     [30, 40],
+                shadowSize:   [35, 16],
+                iconAnchor:   [15, 20],
+                shadowAnchor: [8, -11]
+            }
+        });
+
+        var greenIcon = new LeafIcon({iconUrl: 'img/map-marker.png'}),
+            redIcon = new LeafIcon({iconUrl: 'img/map-marker.png'}),
+            orangeIcon = new LeafIcon({iconUrl: 'img/map-marker.png'});
+
+        L.marker([42.2949323, -71.0733996], {icon: greenIcon}).addTo(map).bindTooltip("<a href='https://www.google.com/maps/place/512+Park+St,+Dorchester+Center,+MA+02124/@42.294801,-71.0740265,19z/data=!3m1!4b1!4m5!3m4!1s0x89e37b94cd3b7d87:0xa7b3a51c3660a060!8m2!3d42.2948!4d-71.073478' target='_blank' rel='noopener noreferrer'><strong>Nightingale</strong></a>",{offset: [5, 21], permanent: true, direction: "right"});
+        L.marker([42.3435517,-71.0817284], {icon: redIcon}).addTo(map).bindTooltip("<a href='https://www.google.com/maps/place/Titus+Sparrow+Park/@42.3435517,-71.0817284,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a117b4f2ea1:0x8f5975e57f1ad080!8m2!3d42.3435517!4d-71.0795397' target='_blank' rel='noopener noreferrer'><strong>Titus Sparrow Park</strong></a>", {offset: [-2, 21], permanent: true, direction: "left"});
+        L.marker([42.3257712,-71.077695], {icon: orangeIcon}).addTo(map).bindTooltip("<a href='https://www.google.com/maps/place/403+Dudley+St,+Boston,+MA+02119/@42.3257712,-71.077695,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a3794e99867:0x15d0e87786e06caf!8m2!3d42.3257673!4d-71.075501' target='_blank' rel='noopener noreferrer'><strong>El Jardín de la Amistad</strong></a>", {offset: [-5, 21], permanent: true, direction: "left"});
+    </script>
+</body>
+
+</html>
